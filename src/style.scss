@@ -1,0 +1,215 @@
+$azul:#264065;
+$azul-clear: #A9D6CB;
+$fontprimary:"Poppins", sans-serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $fontprimary;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1400px;
+    width: 100%;
+    padding: 50px 100px;
+    margin: auto;
+    background-image: url(../src/assets/img/woman.png), 
+                    url(../src/assets/img/FlorFondo.png),
+                    url(../src/assets/img/Rectangle\ 2.png);
+    background-size: 95%, 33%, 35%;
+    background-position: 295% 40%, 87% 17%, top right;
+    background-repeat: no-repeat;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    .principal {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        list-style: none;
+        a {
+            color: black;
+            font-weight: 300;
+            text-decoration: none;
+        }
+        .more-menu {
+            position: relative;
+
+            .more-btn {
+                border: none;
+                background: none;
+                font-family: $fontprimary;
+                font-size: 16px;
+                font-weight: 300;
+                cursor: pointer;
+            }
+
+            .dropdown {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+
+                background-color: white;
+                padding: 10px;
+                margin: 0;
+
+                list-style: none;
+                border-radius: 10px;
+
+                li {
+                    margin: 10px;
+                }
+
+                a {
+                    white-space: nowrap;
+                }
+            }
+
+            &.active {
+                .dropdown {
+                    display: block;
+                }
+            }
+        }
+    }
+    .sign {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        img {
+            width: 25px;
+            margin-right: 20px;
+        }
+        img:last-child {
+            width: 20px;
+        }
+        a {
+            color: black;
+            
+        }
+        .up {
+                color: white;
+                background-color: $azul;
+                border-radius: 20px;
+                padding: 10px 20px;
+                text-decoration: none;
+                margin-left: 20px;
+            }
+    }
+}
+.main {
+   max-width: 50%;
+   .title {
+    color: $azul;
+    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: 10px;
+   }
+   .text {
+    font-weight: 300;
+    font-size: 19px;
+    margin-bottom: 20px;
+   }
+   .buttons {
+    display: inline-block;
+    margin-bottom: 80px;
+    .primary {
+        color: white;
+        background-color: $azul;
+        border-radius: 20px;
+        padding: 10px 20px;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+    .secondary {
+        color: black;
+        text-decoration: none;
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-image: url(../src/assets/img/playvideo.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: 20px;
+            vertical-align: middle;
+        }
+    }
+   }
+   .dates {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        background-color: $azul-clear;
+        border-radius: 50px;
+        padding: 4px;
+        margin-bottom: 20px;
+        vertical-align: middle;
+    }
+    h2 {
+        font-weight: 500;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+   }
+   p {
+        font-weight: 300;
+        font-size: 14px;
+        text-align: center;
+   }
+   .review {
+    position: relative;
+        article {
+            width: 280px;
+            height: 150px;
+            border-radius: 10px;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 10px;
+         }   
+        .first {
+            position: absolute;
+            top: -350px;
+            right: -850px;
+            transform: translate(-50%, -50%);
+        }  
+        .secondary {
+            position: absolute;
+            top: -150px;
+            right: -750px;
+            transform: translate(-50%, -50%);
+        }
+        img {
+            width: 20px;
+            margin-bottom: 3px;
+        }
+        p {
+            text-align: left;
+            margin-bottom: 5px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .name {
+            font-weight: 700;
+            color: $azul;
+        }
+        
+        
+    }
+
+}
